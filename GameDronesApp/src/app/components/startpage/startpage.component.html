@@ -1,0 +1,23 @@
+<section>
+  <h1 class="cinzel">Game of Drones</h1>
+  <div class="form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username1">
+          <i class="fas fa-dragon fa-3x fa-fw primary-font"></i>
+        </label>
+        <input type="text" class="form-control blue-control" name="username1" formControlName="username1" (keydown.space)="$event.preventDefault();" placeholder="Player One" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control red-control" name="username2" formControlName="username2" (keydown.space)="$event.preventDefault();" placeholder="Player Two" autocomplete="off">
+        <label for="username2">
+          <i class="fas fa-dragon fa-3x fa-fw fa-flip-horizontal secondary-font"></i>
+        </label>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-start">
+        <span>Start</span>
+        <i class="fas fa-khanda fa-4x fa-fw"></i>
+      </button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+$primary: var(--primary);
+$secondary: var(--secondary);
+
+section {
+    h1 {
+        font-size: 5em;
+        text-align: center;
+    }
+    div.form {
+        margin: 0 auto;
+        text-align: center;
+        .form-group{
+            padding: 5px;
+            .form-control{
+                border-radius: 5px;
+                font-size: 2em;
+                text-transform: uppercase;
+                padding: 2px 0;
+                text-align: center;
+                margin: 0 3px;
+            }
+            .red-control {
+                border-color: $secondary;
+                color: $secondary;
+            }
+            .red-control:focus{
+                outline-color: $secondary;
+            }
+            .blue-control {
+                border-color: $primary;
+                color: $primary;
+            }
+            .blue-control:focus{
+                outline-color: $primary;
+            }
+        }
+    }
+}
