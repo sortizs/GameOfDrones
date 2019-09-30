@@ -20,7 +20,7 @@ export class StartpageComponent implements OnInit {
 
   onSubmit() {
     console.log(this.loginForm.value);
-    this.router.navigate(['contest'], { skipLocationChange: true });
+    this.router.navigate(['contest']);
   }
 
   buildForm() {

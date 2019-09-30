@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { map } from "rxjs/operators";
+import { Player } from '../entities/player';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,9 @@ export class PlayerService {
       'Content-type': 'application/json; charset=utf-8'
     })
 
-    return this.http.get(`${this.url}player`);
+    return this.http.get(`${this.url}player`).
+            pipe(map((
+              data: Player[]) => {return data;
+              }));
   }
 }
