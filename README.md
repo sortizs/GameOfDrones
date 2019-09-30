@@ -8,7 +8,7 @@
 
 ## Back-end web app
 La URL sigue el formato /api/{controller} 
-- https://dronesservices.azurewebsites.net
+- https://dronesservices.azurewebsites.net 
 Controladores: 
 - Player
 - Winner
